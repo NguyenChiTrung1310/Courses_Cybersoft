@@ -1,8 +1,8 @@
-import axios from 'axios';
 import { createAction } from '.';
+import connector from '../../configs/connector';
 import { SET_TOKEN } from './type';
 export const signIn = (data) => (dispatch) => {
-  axios({
+  connector({
     url: 'http://elearning0706.cybersoft.edu.vn/api/QuanLyNguoiDung/DangNhap',
     method: 'POST',
     data,

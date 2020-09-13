@@ -1,16 +1,13 @@
 // create async action
-import axios from 'axios';
 import { createAction } from '.';
+import connector from '../../configs/connector';
 import { SET_COURSES } from './type';
 
 export const fetchCourses = (dispatch) => {
-  axios({
+  connector({
     url:
       'http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01',
     method: 'GET',
-    headers: {
-      Authorization: 'Bearer ' + localStorage.getItem('myToken'),
-    },
   })
     .then((res) => {
       console.log(res.data);
