@@ -11,4 +11,5 @@ const createConnector = () => {
   return axios.create(config);
 };
 
-export default createConnector();
+const connector = createConnector();
+export default connector;
