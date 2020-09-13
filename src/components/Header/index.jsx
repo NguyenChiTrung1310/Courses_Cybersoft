@@ -17,7 +17,7 @@ class Header extends Component {
 }
 
 const mapStateToProps = (state) => ({
-  isLogin: !state.credentials.token,
+  isLogin: !!state.credentials.token,
 });
 
-export default connect()(Header);
+export default connect(mapStateToProps)(Header);
