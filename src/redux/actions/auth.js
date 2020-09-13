@@ -1,5 +1,5 @@
 import axios from 'axios';
-import createAction from '.';
+import { createAction } from '.';
 import { SET_TOKEN } from './type';
 export const signIn = (data) => (dispatch) => {
   axios({

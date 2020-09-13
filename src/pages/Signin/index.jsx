@@ -2,6 +2,7 @@ import { Box, Button, TextField, Typography } from '@material-ui/core';
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { signIn } from '../../redux/actions/auth';
+import Header from '../../components/Header';
 
 class Signin extends Component {
   constructor(props) {
@@ -32,6 +33,7 @@ class Signin extends Component {
   render() {
     return (
       <div>
+        <Header />
         <Box textAlign='center' mb={5}>
           <Typography component='h1' variant='h2'>
             Sign in
