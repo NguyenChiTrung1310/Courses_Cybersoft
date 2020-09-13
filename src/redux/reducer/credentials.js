@@ -7,7 +7,7 @@ let initialState = {
 const reducer = (state = initialState, { type, payload }) => {
   switch (type) {
     case SET_TOKEN:
-      return { ...state, token: payload };
+      return { token: payload, ...state };
     default:
       return state;
   }
