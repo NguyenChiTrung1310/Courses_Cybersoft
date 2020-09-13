@@ -1,7 +1,7 @@
 import { createStore, combineReducers, applyMiddleware, compose } from 'redux';
 import course from '../redux/reducer/course';
 import thunk from 'redux-thunk';
-
+import credentials from '../redux/reducer/credentials';
 const reducer = combineReducers({
   course,
   credentials,
