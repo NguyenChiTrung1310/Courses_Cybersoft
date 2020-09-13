@@ -8,6 +8,9 @@ export const fetchCourses = (dispatch) => {
     url:
       'http://elearning0706.cybersoft.edu.vn/api/QuanLyKhoaHoc/LayDanhSachKhoaHoc?MaNhom=GP01',
     method: 'GET',
+    headers: {
+      Authorization: 'Bearer ' + localStorage.getItem('myToken'),
+    },
   })
     .then((res) => {
       console.log(res.data);
