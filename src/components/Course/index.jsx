@@ -13,7 +13,8 @@ import styles from './style';
 
 class Course extends Component {
   render() {
-    // const { hinhAnh } = this.props.item;
+    const { tenKhoaHoc, moTa, hinhAnh } = this.props.item;
+
     return (
       <div>
         <Card>
@@ -21,16 +22,15 @@ class Course extends Component {
             <CardMedia
               // className={this.props.classes.styleImg}
               style={{ height: 150 }}
-              image='https://material-ui.com/static/images/cards/contemplative-reptile.jpg'
+              image={hinhAnh}
               title='Contemplative Reptile'
             />
             <CardContent>
               <Typography gutterBottom variant='h5' component='h2'>
-                Lizard
+                {tenKhoaHoc}
               </Typography>
               <Typography variant='body2' color='textSecondary' component='p'>
-                Lizards are a widespread group of squamate reptiles, with over
-                6,000 species, ranging across all continents except Antarctica
+                {moTa.substr(0, 30) + '...'}
               </Typography>
             </CardContent>
           </CardActionArea>

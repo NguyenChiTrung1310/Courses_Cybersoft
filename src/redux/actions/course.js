@@ -13,7 +13,8 @@ export const fetchCourses = (dispatch) => {
       console.log(res.data);
 
       // 1) dispatch action
-      this.props.dispatch(createAction(SET_COURSES, res.data));
+      // this.props.dispatch(createAction(SET_COURSES, res.data));
+      dispatch(createAction(SET_COURSES, res.data));
     })
     .catch((err) => {
       console.log(err);

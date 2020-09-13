@@ -9,9 +9,9 @@ class Home extends Component {
   renderCourses = () => {
     return this.props.courseList.map((item, index) => {
       return (
-        <div key={index}>
-          <Course />
-        </div>
+        <Grid key={index} item xs={12} sm={6} md={4} lg={3}>
+          <Course item={item} />
+        </Grid>
       );
     });
   };
@@ -27,18 +27,7 @@ class Home extends Component {
         </Typography>
         <Container maxWidth='lg'>
           <Grid container spacing={3}>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Course />
-            </Grid>
-            {/* <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Course />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Course />
-            </Grid>
-            <Grid item xs={12} sm={6} md={4} lg={3}>
-              <Course />
-            </Grid> */}
+            {this.renderCourses()}
           </Grid>
         </Container>
       </div>
